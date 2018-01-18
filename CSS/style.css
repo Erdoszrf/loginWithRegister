@@ -1,0 +1,114 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+html,body,.main{
+  height: 100%;
+  font: 14px/1.5 Arial, Helvetica, sans-serif
+}
+a{
+  text-decoration: none;
+  color:#444;
+}
+.icon {
+  width: 1em; height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+.header{
+  position: absolute;
+  width: 100%;
+  top:15px;
+}.header .userLogo{
+  float: right;
+  margin-right: 15px;
+  font-size: 35px;
+}
+.main{
+  background: linear-gradient(to bottom, #d0e4f7 0%,#73b1e7 24%,#0a77d5 50%,#539fe1 79%,#87bcea 100%);
+}
+.popBox.login .model.register,.popBox.register .model.login{
+  transform: translate(-50%,-50%) rotateY(180deg);
+  backface-visibility: hidden;
+  transition: all 1s;
+}
+.popBox.login .model.login,.popBox.register .model.register{
+  transform: translate(-50%,-50%) rotateY(0deg);
+  backface-visibility: hidden;
+  transition: all 1s;
+}
+.popBox{
+  display: none;
+}
+.model{
+  position:absolute;
+  left: 50%;
+  top:50%;
+  width:400px;
+  transform: translate(-50%,-50%);
+  background: white;
+  padding: 15px;
+  box-shadow: 0 3px 4px 5px rgba(0,0,0,0.2);
+}
+.model .close{
+  position:absolute;
+  right: 8px;
+  top: 9px;
+  font-size: 20px;
+}
+.model .tab{
+  text-align: center;
+}
+.model .tab a{
+  display:inline-block;
+  font-size: 16px;
+  margin:0 10px;
+}
+.model .tab a.active{
+  border-bottom: 2px solid #444;
+  font-size: 14px;
+}
+.model .cont{
+  padding: 20px 40px;
+}
+.model .cont .errormsg{
+  font-size: 14px;
+  color: #ff9800;
+}
+.model .cont .inputArea{
+  position: relative;
+  margin-top:10px;
+}
+
+.model .cont .inputArea .icon.user,.model .cont .inputArea .icon.password{
+  position: absolute;
+  top:calc(50% - 9px);
+  left:6px;
+  font-size: 18px;
+}
+.model .cont input[type=text],
+.model .cont input[type=password]{
+  padding: 10px 10px 10px 28px;
+  width: 100%;
+  outline: none;
+}
+.model.register .cont  input[type=submit]{
+  margin-top:1px;
+  padding: 5px 10px;
+  border: none;
+  background: #fff;
+  box-shadow: 0px 0px 2px rgba(0,0,0,0.4);
+  outline: none;
+}
+.model.login .cont  input[type=submit]{
+  margin-top:2px;
+  padding: 5px 10px;
+  border: none;
+  background: #fff;
+  box-shadow: 0px 0px 2px rgba(0,0,0,0.4);
+  outline: none;
+}
+
